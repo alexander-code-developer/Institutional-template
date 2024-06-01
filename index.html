@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon"
+        href="https://th.bing.com/th/id/R.39e48651e3cfb9efc0ab0f99a68ef46d?rik=AabHfAyq1a3P7g&riu=http%3a%2f%2fdgetigto.gob.mx%2fimg%2fdgeti.png&ehk=uI9b3n%2f6bpQV%2byW%2b4ivuNMWp6fWdQ0%2bmZuAkv5dFqDU%3d&risl=&pid=ImgRaw&r=0"
+        sizes="32x32" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gargando.....</title>
+</head>
+
+<body>
+
+    <!-- Animación de carga -->
+    <div class="loader"></div>
+    <style>
+        /* Estilos para la animación de carga */
+        .loader {
+            border: 16px solid #f3f3f3;
+            /* Gris claro */
+            border-top: 16px solid #7c0b0b;
+            /* Azul */
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            animation: spin 1s linear infinite;
+            /* Animación de rotación */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            right: 50%;
+            margin-top: -100px;
+            /* La mitad del tamaño de la rueda de carga */
+            margin-left: -90px;
+            /* La mitad del tamaño de la rueda de carga */
+            z-index: 9999;
+            /* Asegura que la animación de carga esté en la parte superior */
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Estilos opcionales para ocultar la animación de carga después de que la página se haya cargado completamente */
+        body.loading .loader {
+            display: none;
+        }
+    </style>
+
+    <script>
+        // Redirigir automáticamente a otra página después de un cierto tiempo(en milisegundos)
+        setTimeout(function () {
+            window.location.href = "view/index.html";
+        }, 3000); // Cambia 3000 por el tiempo en milisegundos que deseas esperar antes de la redirección
+
+    </script>
+</body>
+
+</html>
